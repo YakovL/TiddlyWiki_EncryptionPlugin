@@ -5,8 +5,7 @@
 |Source      |https://github.com/YakovL/TiddlyWiki_EncryptionPlugin/blob/master/EncryptionPlugin.js|
 |Author      |Yakov Litvin|
 |Forked from |[[EncryptedVaultPlugin|http://visualtw.ouvaton.org/VisualTW.html#EncryptedVaultPlugin]] by Pascal Collin (now available at [[GitHub|https://yakovl.github.io/VisualTW2/VisualTW2.html#EncryptedVaultPlugin]] or [[in web archive|https://web.archive.org/web/20160130130224/http://visualtw.ouvaton.org/VisualTW.html#EncryptedVaultPlugin]]); versions up to 1.7.1 were pre-released as ~NewEncryptedVaultPlugin|
-|''Browser:''|plugin is supposed to work in any modern browser, but it is recommended to create a backup of your TW before trying it with your setup|
-patched plugin, made a simplest test; fixed a couple of bugs (how ~EncryptedVaultPlugin even worked previously?), moved styles from custom block to a shadow, removed several overridings with decorators, changed UI for pass (hidden, autofocus, enter to apply); now {{PoG{test thoroughly (migration from ~EncryptedVaultPlugin; including, DefaultTiddlers, first run of the plugin, macros appearence and usage, data format compatibility, including unencrypted, ...; .oO MVP for ...) and update metadata}}}:
+|Browser     |The plugin is supposed to work in any modern browser, but it is recommended to create a backup of your TW before trying it with your setup|
 
 |''License:''|[[BSD open source license|License]]|
 !Description
@@ -20,7 +19,7 @@ patched plugin, made a simplest test; fixed a couple of bugs (how ~EncryptedVaul
 # Save one more time (to create the encrypted vault) and reload
 # Set a password
 !Usage
-* TODO: describe backward compatibility with .. plugin ("migration")
+* TODO: retest and describe backward compatibility/migration from ~EncryptedVaultPlugin
 * Use <<unlock>><<setPassword>> button (available by default in SideBarOptions)
 * Use a blank password to save unencrypted (disable vault usage)
 * Use {{{unencrypted}}} tag to avoid encryption for some tiddler
@@ -34,6 +33,11 @@ The following macros are available:
 * {{{<<ifLocked tiddlyText>>}}} displays tiddlyText (wikified) if the vault is locked
 * {{{<<ifUnlocked tiddlyText>>}}} displays tiddlyText (wikified) if the vault is unlocked
 <<ifLocked "!!!!Lost password ?">><<ifLocked "Click on">> <<purge>><<ifLocked "to delete any content locked in the encrypted vault.">>
+!Changes since ~EncryptedVaultPlugin
+Compared to ~EncryptedVaultPlugin, this plugin:
+* Fixes various major issues, uses decorators instead of overridings (of _);
+* Uses a customizable StyleSheetVault shadow for styles;
+* Improves the UI for password (doesn't show the typed value, adds autofocus, supports pressing enter to apply).
 ***/
 /***
 Stanford Javascript Crypto Library {{DDnc{v.1.0.6 ([[63eed5|https://github.com/bitwiseshiftleft/sjcl/commit/63eed58b9dc395afb3c03df8d70d7e7bf4c88b1b]]), update!}}}, source: https://github.com/bitwiseshiftleft/sjcl
