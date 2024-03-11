@@ -1,10 +1,10 @@
 /***
-|Name        ||
+|Name        |EncryptionPlugin|
 |Description |Adds AES encryption and password protection and several macros to work with them|
 |Version     |1.7.1|
-|Source      |http://yakovlitvin.pro/TW/pre-releases/NewEncryptedVaultPlugin.txt|
+|Source      |https://github.com/YakovL/TiddlyWiki_EncryptionPlugin/blob/master/EncryptionPlugin.js|
 |Author      |Yakov Litvin|
-|Forked from |[[EncryptedVaultPlugin|http://visualtw.ouvaton.org/VisualTW.html#EncryptedVaultPlugin]] by Pascal Collin (now available at [[GitHub|https://yakovl.github.io/VisualTW2/VisualTW2.html#EncryptedVaultPlugin]] or [[in web archive|https://web.archive.org/web/20160130130224/http://visualtw.ouvaton.org/VisualTW.html#EncryptedVaultPlugin]])|
+|Forked from |[[EncryptedVaultPlugin|http://visualtw.ouvaton.org/VisualTW.html#EncryptedVaultPlugin]] by Pascal Collin (now available at [[GitHub|https://yakovl.github.io/VisualTW2/VisualTW2.html#EncryptedVaultPlugin]] or [[in web archive|https://web.archive.org/web/20160130130224/http://visualtw.ouvaton.org/VisualTW.html#EncryptedVaultPlugin]]); versions up to 1.7.1 were pre-released as ~NewEncryptedVaultPlugin|
 |''Browser:''|plugin is supposed to work in any modern browser, but it is recommended to create a backup of your TW before trying it with your setup|
 patched plugin, made a simplest test; fixed a couple of bugs (how ~EncryptedVaultPlugin even worked previously?), moved styles from custom block to a shadow, removed several overridings with decorators, changed UI for pass (hidden, autofocus, enter to apply); now {{PoG{test thoroughly (migration from ~EncryptedVaultPlugin; including, DefaultTiddlers, first run of the plugin, macros appearence and usage, data format compatibility, including unencrypted, ...; .oO MVP for ...) and update metadata}}}:
 
