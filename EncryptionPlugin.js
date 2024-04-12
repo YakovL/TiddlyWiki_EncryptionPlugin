@@ -1,7 +1,7 @@
 /***
 |Name        |EncryptionPlugin|
 |Description |Adds AES encryption and password protection and several macros to work with them|
-|Version     |1.7.1|
+|Version     |1.7.2|
 |Source      |https://github.com/YakovL/TiddlyWiki_EncryptionPlugin/blob/master/EncryptionPlugin.js|
 |Author      |Yakov Litvin|
 |Forked from |[[EncryptedVaultPlugin|http://visualtw.ouvaton.org/VisualTW.html#EncryptedVaultPlugin]] by Pascal Collin (now available at [[GitHub|https://yakovl.github.io/VisualTW2/VisualTW2.html#EncryptedVaultPlugin]] or [[in web archive|https://web.archive.org/web/20160130130224/http://visualtw.ouvaton.org/VisualTW.html#EncryptedVaultPlugin]]); versions up to 1.7.1 were pre-released as ~NewEncryptedVaultPlugin|
@@ -238,7 +238,7 @@ config.extensions.vault = {
 	// this is used to avoid quadratic complexity (filtering N tiddlers per each N tiddlers)
 	unencryptedCacheMap: null,
 	populateUnencryptedCacheMap: function() {
-		var unencryptedArray = this.getUnencryptedArray()
+		var unencryptedArray = this.getUnencryptedArray() || []
 		this.unencryptedCacheMap = {}
 		for(var i = 0; i < unencryptedArray.length; i++) {
 			var title = unencryptedArray[i].title
